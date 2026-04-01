@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahsulot Haqida</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+  
+    </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased flex items-center justify-center flex-col">
+  <div class="max-w-md mx-auto my-12 p-8 bg-white rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] border border-gray-100 flex flex-col gap-6 open-modal close-modal hidden">
+    
+    <div class="space-y-1">
+        <h2 class="text-xl font-bold text-gray-800 tracking-tight">Mahsulotni tahrirlash</h2>
+        <p class="text-sm text-gray-500">Ma'lumotlarni o'zgartirgandan so'ng saqlash tugmasini bosing.</p>
+    </div>
+
+    <div class="space-y-4">
+        <div class="group">
+            <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1 ml-1">Rasm havolasi</label>
+            <input type="text" placeholder="https://example.com/image.jpg" 
+                class="modalImage w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:border-transparent outline-none transition-all duration-200 placeholder:text-gray-400 text-gray-700 ">
+        </div>
+
+        <div class="group">
+            <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1 ml-1">Mahsulot nomi</label>
+            <input type="text" placeholder="Masalan: iPhone 15 Pro" 
+                class="modalName w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:border-transparent outline-none transition-all duration-200 text-gray-700">
+        </div>
+
+        <div class="group">
+            <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1 ml-1">Narxi ($)</label>
+            <input type="text" placeholder="1,200" 
+                class="modalPrice w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:border-transparent outline-none transition-all duration-200 text-gray-700 font-medium">
+        </div>
+
+        <div class="group">
+            <label class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1 ml-1">Tavsif</label>
+            <input type="text" placeholder="Mahsulot haqida qisqacha..." 
+                class="modalDesc w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-indigo-500 focus:bg-white focus:border-transparent outline-none transition-all duration-200 text-gray-700">
+        </div>
+    </div>
+
+    <button class="updateProduct w-full py-4 bg-indigo-600 hover:bg-indigo-700 active:scale-[0.98] text-white font-bold rounded-xl shadow-lg shadow-indigo-200 transition-all duration-200 flex justify-center items-center gap-2 mt-2">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd" />
+        </svg>
+        Yangilash
+    </button>
+</div>
+    <div class="max-w-6xl mx-auto px-4 py-12">
+        <a href="index.html" class="inline-flex items-center text-blue-600 hover:text-blue-800 mb-8 transition-colors">
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+            Asosiy sahifaga qaytish
+        </a>
+
+        <div class="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+            
+            <div class="md:w-1/2 bg-gray-200">
+                <img class="single_img w-full h-[400px] md:h-full object-cover transition-transform duration-500 hover:scale-105" src="" alt="Product Image">
+            </div>
+
+            <div class="md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+                <nav class="flex items-center justify-between"><p>
+                    Mahsulot / Detallar
+                </p>
+                <i class="bi bi-pencil-square text-[24px] updateBtn"></i> 
+                </nav>
+                <h1 class="single_title text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 leading-tight"></h1>
+                
+                <div class="flex items-center mb-6">
+                    <span class="text-3xl font-bold text-blue-600">$</span>
+                    <span class="single_pri text-3xl font-bold text-blue-600"></span>
+                </div>
+
+                <div class="border-t border-b border-gray-100 py-6 mb-8">
+                    <h3 class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-2">Tavsif</h3>
+                    <p class="single_text text-gray-600 leading-relaxed text-lg"></p>
+                </div>
+
+                <button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-200 transition-all active:scale-95">
+                    Savatga qo'shish
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/single.js"></script>
+</body>
+</html>

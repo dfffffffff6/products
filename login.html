@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Sahifasi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 h-screen flex items-center justify-center font-sans">
+
+    <div class="bg-white p-10 rounded-2xl shadow-xl w-full max-w-sm border border-gray-100">
+        <h2 class="text-2xl font-bold text-gray-800 text-center mb-8">Tizimga kirish</h2>
+        
+        <form action="#" class="flex flex-col gap-5">
+            <input type="text" placeholder="Ismingizni kiriting" 
+                class="inpName w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+            
+            <input type="text" placeholder="Parolingizni kiriting" 
+                class="inpPass w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+            
+            <button id="sendForm" 
+                class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg shadow-md hover:shadow-blue-200 transition-all active:scale-95">
+                Kirish
+            </button>
+        </form>
+    </div>
+
+    <script src="./js/login.js"></script>
+</body>
+</html>
