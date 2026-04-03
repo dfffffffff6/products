@@ -11,6 +11,7 @@ const btn = document.getElementById("sendForm")
             username: ism.value.toLowerCase().trim(),
             password: parol.value.trim()
         }
+        let {username,password} = user
         fetch('https://dummyjson.com/auth/login', {
             method: "POST",
             headers: {
@@ -20,7 +21,7 @@ const btn = document.getElementById("sendForm")
         })    
         .then(res => res.json())
         .then(data => {
-            console.log(data.accessToken);
+            
             if(data.accessToken){
                 alert("Siz muvaffaqiyatli kirdingiz")
                 // Saqlash uchun setItem ishlatiladi
@@ -28,6 +29,14 @@ const btn = document.getElementById("sendForm")
                 setTimeout(() => {
                     window.location.href = "./index.html"
                 }, 500)
+            }
+            else if (username == "Bobur".toLowerCase() && password == "Bobur55"){
+            alert("Siz admin panelga kirdingiz")
+            localStorage.setItem("tokenAdmin",JSON.stringify(user))
+            setTimeout(()=>{
+                window.location.href = "./admin.html"
+            },500)
+                
             }
         })
     }

@@ -1,7 +1,13 @@
 const div = document.getElementById("container");
+const out = document.querySelector("#SignOut")
 const savedUser = JSON.parse(localStorage.getItem("token"))
 console.log(savedUser);
 if(savedUser){
+const SignOut = function (){
+  localStorage.removeItem("token")
+  window.location.href = "./login.html "
+}
+  out.addEventListener("click",SignOut)
 
   fetch("https://dummyjson.com/products")
     .then((res) => res.json())
